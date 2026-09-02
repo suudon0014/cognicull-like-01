@@ -1,0 +1,596 @@
+{
+  "domain": "特殊相対性理論及び一般相対性理論",
+  "version": "1.0.0",
+  "nodes": [
+    {
+      "id": "galilean-relativity",
+      "title": "ガリレイの相対性原理と慣性系",
+      "summary": "すべての慣性系において力学法則は等しく成立するという古典力学の基本原理。",
+      "content": "ガリレイの相対性原理は、互いに等速直線運動をするどの観測者（慣性系）にとってもニュートンの運動方程式が同じ形式を保つことを主張します。ガリレイ変換 $x' = x - vt, t' = t$ により位置と速度は変換されますが、時間は絶対的で共通のものとみなされます。しかし、この変換は光速の不変性と矛盾することが後に判明します。",
+      "prerequisites": [],
+      "category": "Classical & Math Foundations",
+      "level": 1,
+      "keyFormula": "$x' = x - vt, \\quad t' = t$",
+      "quiz": {
+        "question": "ガリレイ変換において絶対的（どの慣性系でも不変）と仮定されている物理量はどれか？",
+        "options": ["速度", "位置", "時間", "運動エネルギー"],
+        "correctIndex": 2,
+        "explanation": "古典力学のガリレイ変換では、時間はすべての慣性系で一様に進む絶対的なものと仮定されていました。"
+      }
+    },
+    {
+      "id": "maxwell-equations",
+      "title": "マクスウェル方程式と光速の謎",
+      "summary": "電磁気学を統合した4方程式。真空中での電磁波の伝播速度（光速 $c$）が一定であることを導く。",
+      "content": "マクスウェル方程式から導かれる電磁波の波形方程式により、電磁波の伝播速度は定数 $c = 1/\\sqrt{\\varepsilon_0 \\mu_0}$ で与えられます。これは観測者の移動速度に依存しないため、「光速はどの慣性系から見ても一定なのか（光速不変性）」という古典物理学最大の謎を生み出しました。",
+      "prerequisites": ["galilean-relativity"],
+      "category": "Classical & Math Foundations",
+      "level": 2,
+      "keyFormula": "$c = \\frac{1}{\\sqrt{\\varepsilon_0 \\mu_0}}$",
+      "quiz": {
+        "question": "マクスウェル方程式から導かれる真空中の光速 $c$ について正しい記述はどれか？",
+        "options": [
+          "光源の速度に応じて変化する",
+          "真空の誘電率と透磁率という定数のみで定まる",
+          "観測者の慣性系によって変化する",
+          "ガリレイ変換と完全に整合する"
+        ],
+        "correctIndex": 1,
+        "explanation": "マクスウェル方程式から導かれる光速は真空の誘電率 $\\varepsilon_0$ と透磁率 $\\mu_0$ のみで決まり、観測者や光源の運動に依存しません。"
+      }
+    },
+    {
+      "id": "michelson-morley",
+      "title": "マイケルソン・モーリーの実験",
+      "summary": "エーテル風の検出を試み、光速が地球の運動方向に依存しない（エーテルが存在しない）ことを実証した実験。",
+      "content": "光の媒質と考えられていた「エーテル」に対する地球の相対運動を検出すべく、精密な干渉計を用いて異なる方向への光速の差を測定しました。実験結果は完全な負（差なし）であり、光速が方向や観測者の運動に依存しない「光速不変の原理」を強力に裏付けることとなりました。",
+      "prerequisites": ["maxwell-equations"],
+      "category": "Classical & Math Foundations",
+      "level": 3,
+      "keyFormula": "$\\Delta t = 0 \\implies c_1 = c_2$",
+      "quiz": {
+        "question": "マイケルソン・モーリーの実験の歴史的意義として最も適切なものはどれか？",
+        "options": [
+          "エーテルの存在を定量的実験で確定させた",
+          "光の粒子説を証明した",
+          "エーテル風の不検出により光速不変の原理の実験的基礎を与えた",
+          "ガリレイ変換の正当性を確認した"
+        ],
+        "correctIndex": 2,
+        "explanation": "エーテルの相対運動による光速のズレが検出されなかったことで、エーテル仮説が否定され光速不変の原理が導かれました。"
+      }
+    },
+    {
+      "id": "relativity-postulates",
+      "title": "特殊相対性理論の2基本原理",
+      "summary": "アインシュタインが提唱した「相対性原理」と「光速不変の原理」の2つの公理。",
+      "content": "アインシュタインは1905年、2つの原理を置きました：(1)相対性原理（物理法則はすべての慣性系で同形）、(2)光速不変の原理（真空中の光速は光源や観測者の運動によらず一定 $c$）。これら2つの前提から、時間と空間の従来の概念を刷新する理論が構築されます。",
+      "prerequisites": ["michelson-morley"],
+      "category": "Special Relativity Fundamentals",
+      "level": 4,
+      "keyFormula": "c = \\text{const. for all inertial frames}",
+      "quiz": {
+        "question": "特殊相対性理論の出発点となる2つの基本原理の組み合わせはどれか？",
+        "options": [
+          "等価原理と光速不変の原理",
+          "相対性原理と光速不変の原理",
+          "慣性力の原理とエネルギー保存則",
+          "ガリレイ相対性原理と絶対時間原理"
+        ],
+        "correctIndex": 1,
+        "explanation": "特殊相対性理論は「(1)すべての慣性系での物理法則の同形性（相対性原理）」と「(2)真空中の光速不変性」を基礎とします。"
+      }
+    },
+    {
+      "id": "lorentz-factor",
+      "title": "ローレンツ因子 $\\gamma$",
+      "summary": "相対論的効果（時間の伸びや長さの縮み）のスケールを決定する無次元量。",
+      "content": "速度 $v$ で移動する系に対するローレンツ因子は $\\gamma = \\frac{1}{\\sqrt{1 - v^2/c^2}}$ で定義されます。日常の低速（$v \\ll c$）では $\\gamma \\approx 1$ ですが、$v$ が光速 $c$ に近づくにつれて $\\gamma \\to \\infty$ へと急激に増大します。",
+      "prerequisites": ["relativity-postulates"],
+      "category": "Special Relativity Fundamentals",
+      "level": 5,
+      "keyFormula": "$\\gamma = \\frac{1}{\\sqrt{1 - v^2/c^2}}$",
+      "quiz": {
+        "question": "物体が光速の80%（$v = 0.8c$）で運動しているとき、ローレンツ因子 $\\gamma$ の値はいくらか？",
+        "options": ["1.25", "1.67", "2.00", "0.60"],
+        "correctIndex": 1,
+        "explanation": "$\\sqrt{1 - 0.8^2} = \\sqrt{1 - 0.64} = \\sqrt{0.36} = 0.6$。よって $\\gamma = 1/0.6 = 5/3 \\approx 1.67$ となります。"
+      }
+    },
+    {
+      "id": "time-dilation",
+      "title": "時間の引き伸ばし（Time Dilation）",
+      "summary": "運動している時計の進みは、静止している観測者から見て遅れて見える現象。",
+      "content": "動いている系での時間間隔 $\\Delta t_0$（固有時間）に対し、静止系から観測される時間間隔 $\\Delta t$ は $\\Delta t = \\gamma \\Delta t_0$ となります。光速に近い速度で移動する宇宙船内では、地球上の観測者から見て時間がゆっくり進みます。ミューオンの地表到達現象などで実験的に実証されています。",
+      "prerequisites": ["lorentz-factor"],
+      "category": "Special Relativity Fundamentals",
+      "level": 6,
+      "keyFormula": "$\\Delta t = \\gamma \\Delta t_0$",
+      "quiz": {
+        "question": "静止系から見て高速運動する時計の進み方に関する正しい説明はどれか？",
+        "options": [
+          "静止系の時計よりも速く進む",
+          "静止系の時計よりも遅く進む",
+          "進行方向によって速くなったり遅くなったりする",
+          "運動しても進み方は一切変わらない"
+        ],
+        "correctIndex": 1,
+        "explanation": "ローレンツ因子 $\\gamma > 1$ であるため、静止系から観測すると動いている時計の時間間隔 $\\Delta t$ は伸び、時計の進みは遅くなります。"
+      }
+    },
+    {
+      "id": "length-contraction",
+      "title": "ローレンツ収縮（Length Contraction）",
+      "summary": "運動方向における物体の長さが静止長に比べて短縮して観測される現象。",
+      "content": "静止系で測った長さ（固有長）を $L_0$ とすると、速度 $v$ で運動する物体の運動方向の長さ $L$ は $L = \\frac{L_0}{\\gamma} = L_0 \\sqrt{1 - v^2/c^2}$ に縮みます。なお、運動と垂直な方向の寸法は変化しません。",
+      "prerequisites": ["lorentz-factor"],
+      "category": "Special Relativity Fundamentals",
+      "level": 6,
+      "keyFormula": "$L = \\frac{L_0}{\\gamma}$",
+      "quiz": {
+        "question": "長さ $L_0$ のロケットが光速の90%で進むとき、運動方向の長さ $L$ はどう変化するか？",
+        "options": [
+          "運動方向に伸びる",
+          "運動方向に縮む",
+          "全方向に均等に小さくなる",
+          "変化しない"
+        ],
+        "correctIndex": 1,
+        "explanation": "ローレンツ収縮により、運動方向の長さのみが $1/\\gamma$ に短縮して観測されます。"
+      }
+    },
+    {
+      "id": "lorentz-transformation",
+      "title": "ローレンツ変換",
+      "summary": "光速不変性を保ちつつ、異なる慣性系間の時間・空間座標を正確に変換する一次変換。",
+      "content": "ガリレイ変換に代わり、特殊相対性理論における正しい座標変換です。$x' = \\gamma (x - vt), t' = \\gamma (t - v x / c^2)$。時間と空間が相互に混ざり合う変換であり、同時性の不変性が失われることを直接示します。",
+      "prerequisites": ["time-dilation", "length-contraction"],
+      "category": "Special Relativity Fundamentals",
+      "level": 7,
+      "keyFormula": "$x' = \\gamma(x - vt), \\quad t' = \\gamma\\left(t - \\frac{vx}{c^2}\\right)$",
+      "quiz": {
+        "question": "ローレンツ変換において、ある慣性系で「同時に起きた2つの出来事」が別の慣性系ではどう観測されるか？",
+        "options": [
+          "必ず同時に観測される",
+          "空間的に離れていれば同時に観測されないことがある（同時性の相対性）",
+          "過去と未来が完全に入れ替わる",
+          "光速を超えて伝わる"
+        ],
+        "correctIndex": 1,
+        "explanation": "ローレンツ変換の $t'$ 式には位置 $x$ が含まれるため、異なる場所で同時に起きた現象は他の慣性系では異なる時刻に観測されます。"
+      }
+    },
+    {
+      "id": "relativistic-velocity-addition",
+      "title": "相対論的速度加算則",
+      "summary": "速度の合成が光速 $c$ を超えないように修正された速度合成公式。",
+      "content": "慣性系 $S$ に対して速度 $v$ で動く系 $S'$ 内で、物体が速度 $u'$ で動くとき、$S$ から見た物体の速度 $u$ は $u = \\frac{u' + v}{1 + \\frac{u'v}{c^2}}$ となります。$u' = c$ や $v = c$ を代入しても合成速度は $c$ となり、光速不変性が保たれます。",
+      "prerequisites": ["lorentz-transformation"],
+      "category": "Special Relativity Fundamentals",
+      "level": 8,
+      "keyFormula": "$u = \\frac{u' + v}{1 + \\frac{u'v}{c^2}}$",
+      "quiz": {
+        "question": "光速の0.8倍で飛ぶ宇宙船から、進行方向に光（速度 $c$）を発射した。外部の静止系から見た光の速度はいくらか？",
+        "options": ["1.8c", "1.0c", "0.8c", "0.2c"],
+        "correctIndex": 1,
+        "explanation": "相対論的速度加算則に $u'=c$ を代入すると $(c+v)/(1+v/c) = c(c+v)/(c+v) = c$ となり、常に光速 $c$ となります。"
+      }
+    },
+    {
+      "id": "spacetime-interval",
+      "title": "ミンコフスキー時空と時空不変量 $ds^2$",
+      "summary": "4次元時空における2点（事象）間の幾何学的距離（不変量）。",
+      "content": "時間軸に虚数的な符号を与えることで、4次元時空の「距離」に相当する時空不変量 $ds^2 = -c^2 dt^2 + dx^2 + dy^2 + dz^2$ を定義します。どの慣性系から見ても $ds^2$ の値は同一であり、$ds^2 < 0$（時間的）、$ds^2 = 0$（光的）、$ds^2 > 0$（空間的）に分類されます。",
+      "prerequisites": ["lorentz-transformation"],
+      "category": "Spacetime Geometry & Electrodynamics",
+      "level": 8,
+      "keyFormula": "$ds^2 = -c^2 dt^2 + dx^2 + dy^2 + dz^2$",
+      "quiz": {
+        "question": "光が通過する軌跡上の2事象間の時空不変量 $ds^2$ の値はいくらか？",
+        "options": ["正（空間的）", "負（時間的）", "0（光的）", "観測系による"],
+        "correctIndex": 2,
+        "explanation": "光の移動距離 $dx^2+dy^2+dz^2 = (cdt)^2$ であるため、$ds^2 = -c^2 dt^2 + c^2 dt^2 = 0$（光的・ライトライク）となります。"
+      }
+    },
+    {
+      "id": "light-cone",
+      "title": "光錐（Light Cone）と因果律",
+      "summary": "時空図において、光が進む領域によって過去・未来・因果関係の及ぶ限界を定義する構造。",
+      "content": "時空点から発せられた光の軌跡（$ds^2 = 0$）が描く円錐領域を光錐と呼びます。未来光錐の内部のみが「因果的に影響を与えられる領域」であり、空間的領域（光錐の外）へは光速を超えて情報や物質が伝わることができないため、因果律を守る障壁となります。",
+      "prerequisites": ["spacetime-interval"],
+      "category": "Spacetime Geometry & Electrodynamics",
+      "level": 9,
+      "keyFormula": "$ds^2 \\le 0 \\implies \\text{Causally Connected}$",
+      "quiz": {
+        "question": "時空図において、現在発生した事象が将来影響を与えることができる範囲はどこか？",
+        "options": ["未来光錐の内部および表面", "過去光錐の内部", "光錐の外側の全領域", "時空全体のどこでも"],
+        "correctIndex": 0,
+        "explanation": "光速を超えて信号を送ることはできないため、影響を与えられる範囲は未来光錐の内部（時間的）および表面（光的）に限られます。"
+      }
+    },
+    {
+      "id": "four-vectors",
+      "title": "4元ベクトル（Four-Vectors）",
+      "summary": "ローレンツ変換に対してベクトルとして変換される4次元時空の量（4元位置・4元速度）。",
+      "content": "時空の自由度を統一的に扱うため、成分 $x^\\mu = (ct, x, y, z)$ のように4次元量として定式化します。固有時間 $\\tau$ による微分で定義される4元速度 $U^\\mu = \\frac{dx^\\mu}{d\\tau} = (\\gamma c, \\gamma \\mathbf{v})$ は、ノルムが常に一定 $-c^2$ となる重要な性質を持ちます。",
+      "prerequisites": ["spacetime-interval"],
+      "category": "Spacetime Geometry & Electrodynamics",
+      "level": 9,
+      "keyFormula": "$x^\\mu = (ct, x, y, z), \\quad U^\\mu = (\\gamma c, \\gamma \\mathbf{v})$",
+      "quiz": {
+        "question": "4元速度 $U^\\mu$ のローレンツ不変なノルム $U^\\mu U_\\mu$ の値はいくらか？",
+        "options": ["0", "$v^2$", "$-c^2$", "$\\gamma^2 c^2$"],
+        "correctIndex": 2,
+        "explanation": "4元速度のノルムは $U^\\mu U_\\mu = -\\gamma^2 c^2 + \\gamma^2 v^2 = -\\gamma^2 c^2 (1 - v^2/c^2) = -c^2$ となり、速度によらず定数となります。"
+      }
+    },
+    {
+      "id": "four-momentum-energy",
+      "title": "4元運動量と質量のエネルギー同等性 $E=mc^2$",
+      "summary": "4元運動量 $P^\\mu = m U^\\mu$ から導かれる、質量とエネルギーの等価性。",
+      "content": "4元運動量は $P^\\mu = (E/c, \\mathbf{p})$ と表されます。このノルム不変性 $P^\\mu P_\\mu = -(E/c)^2 + p^2 = -m^2 c^2$ より、相対論的エネルギー・運動量関係式 $E^2 = (pc)^2 + (mc^2)^2$ が得られます。静止物体（$p=0$）の場合、有名な $E = mc^2$ が導かれます。",
+      "prerequisites": ["four-vectors"],
+      "category": "Special Relativity Fundamentals",
+      "level": 10,
+      "keyFormula": "$E^2 = (pc)^2 + (mc^2)^2 \\implies E_0 = mc^2$",
+      "quiz": {
+        "question": "静止している質量 $m$ の粒子が持つエネルギー（静止エネルギー）を表す式はどれか？",
+        "options": ["$E = \\frac{1}{2} m v^2$", "$E = m c^2$", "$E = p c$", "$E = \\gamma m v$"],
+        "correctIndex": 1,
+        "explanation": "運動量 $p=0$ のとき、エネルギーと半定常質量の関係式から $E = mc^2$ となります。"
+      }
+    },
+    {
+      "id": "electromagnetic-tensor",
+      "title": "電磁場テンソル $F_{\\mu\\nu}$ と相対論的電磁気学",
+      "summary": "電場 $\\mathbf{E}$ と磁場 $\\mathbf{B}$ を統合し、ローレンツ変換下での電磁場の振る舞いを表す反対称テンソル。",
+      "content": "古典電磁気学の電場 $\\mathbf{E}$ と磁場 $\\mathbf{B}$ は分離したベクトルではなく、4次元空間の階数2の反対称テンソル $F_{\\mu\\nu} = \\partial_\\mu A_\\nu - \\partial_\\nu A_\\mu$ の成分です。ある慣性系での純粋な電場が、動く観測者からは磁場としても観測されることが直感的に理解できます。",
+      "prerequisites": ["four-vectors"],
+      "category": "Spacetime Geometry & Electrodynamics",
+      "level": 10,
+      "keyFormula": "$F_{\\mu\\nu} = \\partial_\\mu A_\\nu - \\partial_\\nu A_\\mu$",
+      "quiz": {
+        "question": "静止した電荷が作る電場を、高速で横切りながら観測したとき何が観測されるか？",
+        "options": [
+          "電場のみが強くなる",
+          "電場が消滅する",
+          "電場だけでなく磁場も観測される",
+          "何も変化しない"
+        ],
+        "correctIndex": 2,
+        "explanation": "電磁場テンソルのローレンツ変換により、観測者の運動によって電場の一部が磁場へと変換されて観測されます。"
+      }
+    },
+    {
+      "id": "equivalence-principle",
+      "title": "アインシュタインの等価原理",
+      "summary": "局所的に「重力場」と「加速度運動（慣性力）」は物理的に区別できないという原理。",
+      "content": "自由落下するエレベーター内では重力が消去され（無重力状態）、一様加速度系は一様重力場と同等です。慣性質量と重力質量の一致という実験事実に基づき、アインシュタインは重力を力ではなく「時空の歪み」として解釈する着想（一般相対論）を得ました。",
+      "prerequisites": ["relativity-postulates"],
+      "category": "General Relativity Core",
+      "level": 5,
+      "keyFormula": "$m_{\\text{inertial}} = m_{\\text{gravitational}}$",
+      "quiz": {
+        "question": "アインシュタインの等価原理が主張する根幹的な内容はどれか？",
+        "options": [
+          "光速は重力によって加速される",
+          "局所的に重力による効果と加速度運動による効果は区別できない",
+          "重力質量は慣性質量より常に大きい",
+          "重力は電磁気力と完全に同じ力である"
+        ],
+        "correctIndex": 1,
+        "explanation": "等価原理により、閉じた室内にいる観測者は、均一な重力場にいるのか宇宙空間で加速されているのかを実験で区別できません。"
+      }
+    },
+    {
+      "id": "gravitational-redshift",
+      "title": "重力赤方偏移と重力による時間の遅れ",
+      "summary": "強い重力場ほど時間の進みが遅くなり、放出される光の波長が長くなる（赤方偏移）現象。",
+      "content": "等価原理と光の伝播から導かれます。重力ポテンシャル $\\Phi$ が低い（重力が強い）場所では、遠方の観測者から見て時間がゆっくり進みます。そのため、高重力場から届く光の振動数は低下し、波長が赤側へ伸びる重力赤方偏移が発生します（GPS衛星の時刻補正で実用）。",
+      "prerequisites": ["equivalence-principle", "time-dilation"],
+      "category": "General Relativity Core",
+      "level": 7,
+      "keyFormula": "$\\frac{\\Delta \\nu}{\\nu} \\approx \\frac{\\Delta \\Phi}{c^2}$",
+      "quiz": {
+        "question": "地球の地表にある時計と、高高度を飛ぶGPS衛星の時計の進み方を重力効果のみで比較するとどうなるか？",
+        "options": [
+          "地表の時計の方が衛星より遅く進む",
+          "地表の時計の方が衛星より速く進む",
+          "両者の時間の進み方は完全に同じ",
+          "重力は時間の進みに影響を与えない"
+        ],
+        "correctIndex": 0,
+        "explanation": "重力場が強い（重力ポテンシャルが低い）地表の方が、宇宙空間の衛星よりも時間が遅く進みます。"
+      }
+    },
+    {
+      "id": "curved-manifolds",
+      "title": "曲がった多様体とリーマン幾何学",
+      "summary": "非ユーグリッド幾何学を用いて、歪んだ時空を数学的に表現する枠組み。",
+      "content": "一般的な時空は平坦（ユーグリッド的）ではなく、重力源の存在によって曲がっています。曲面上の点ごとに局所座標系を定義し、連続的かつ滑らかに繋ぎ合わせた幾何構造が「リーマン多様体」です。この数学的道具により、重力を幾何学的に記述可能になります。",
+      "prerequisites": ["spacetime-interval", "equivalence-principle"],
+      "category": "Tensors & Differential Geometry",
+      "level": 9,
+      "keyFormula": "M^n \\text{ Riemannian Manifold}",
+      "quiz": {
+        "question": "曲がった空間（非ユーグリッド空間）における三角形の内角の和について正しいものはどれか？",
+        "options": [
+          "常に厳密に180度である",
+          "空間の曲がり方によって180度より大きくも小さくもなる",
+          "常に0度になる",
+          "定義できない"
+        ],
+        "correctIndex": 1,
+        "explanation": "例えば球面のような正の曲率を持つ空間では内角の和は180度より大きくなり、馬の鞍のような負の曲率では180度より小さくなります。"
+      }
+    },
+    {
+      "id": "metric-tensor",
+      "title": "計量テンソル $g_{\\mu\\nu}$",
+      "summary": "時空の歪みや微小距離を決定する一般相対性理論の最も根幹的な動的変数。",
+      "content": "曲がった時空での微小線素は $ds^2 = g_{\\mu\\nu} dx^\\mu dx^\\nu$ と表されます。平坦な時空ではミンコフスキー計量 $\\eta_{\\mu\\nu} = \\text{diag}(-1,1,1,1)$ ですが、質量やエネルギーが存在すると $g_{\\mu\\nu}$ は空間座標の位置に依存して変化し、重力場のポテンシャルそのものを表します。",
+      "prerequisites": ["curved-manifolds"],
+      "category": "Tensors & Differential Geometry",
+      "level": 10,
+      "keyFormula": "$ds^2 = g_{\\mu\\nu} dx^\\mu dx^\\nu$",
+      "quiz": {
+        "question": "一般相対論において、重力場（重力の強さや時空の歪み）を表現する数学的対象はどれか？",
+        "options": ["スカラーポテンシャル", "計量テンソル $g_{\\mu\\nu}$", "ガリレイ変換行列", "マクスウェルテンソル"],
+        "correctIndex": 1,
+        "explanation": "計量テンソル $g_{\\mu\\nu}$ が時空の各点での距離や角度の測り方を規定し、これがニュートン力学における重力ポテンシャルに対応します。"
+      }
+    },
+    {
+      "id": "christoffel-symbols",
+      "title": "クリストッフェル記号 $\\Gamma^\\lambda_{\\mu\\nu}$ と共変微分",
+      "summary": "曲がった空間でベクトルの平行移動や座標変化に伴う変化率を正しく測る補正項。",
+      "content": "座標系や時空自体が曲がっている場合、通常の偏微分 $\\partial_\\mu$ はテンソル性を保ちません。計量テンソルの1階微分から構成されるクリストッフェル記号 $\\Gamma^\\lambda_{\\mu\\nu} = \\frac{1}{2} g^{\\lambda\\sigma} (\\partial_\\mu g_{\\nu\\sigma} + \\partial_\\nu g_{\\mu\\sigma} - \\partial_\\sigma g_{\\mu\\nu})$ を用いた共変微分 $\\nabla_\\mu$ により、曲面上のベクトル場の正しい変化率を計算できます。",
+      "prerequisites": ["metric-tensor"],
+      "category": "Tensors & Differential Geometry",
+      "level": 11,
+      "keyFormula": "$\\nabla_\\mu V^\\nu = \\partial_\\mu V^\\nu + \\Gamma^\\nu_{\\mu\\lambda} V^\\lambda$",
+      "quiz": {
+        "question": "曲がった空間で共変微分が必要とされる主な理由はどれか？",
+        "options": [
+          "通常の偏微分では座標変換に対してテンソルとして適切に変換されないから",
+          "光速が変化してしまうから",
+          "スカラー量しか扱えなくなるから",
+          "時間の進みを止めるため"
+        ],
+        "correctIndex": 0,
+        "explanation": "曲がった空間では基底ベクトル自体が位置によって変化するため、普通の微分にクリストッフェル記号による補正（共変微分）を足す必要があります。"
+      }
+    },
+    {
+      "id": "geodesic-equation",
+      "title": "測地線方程式（Geodesic Equation）",
+      "summary": "歪んだ時空の中で粒子や光が描く「最もまっすぐな軌道（測地線）」の方程式。",
+      "content": "外力を受けない自由落下粒子は、時空の測地線に沿って運動します。方程式は $\\frac{d^2 x^\\mu}{d\\tau^2} + \\Gamma^\\mu_{\\alpha\\beta} \\frac{dx^\\alpha}{d\\tau} \\frac{dx^\\beta}{d\\tau} = 0$。質点や光は重力によって「曲げられている」のではなく、曲がった時空の「最短経路」を直進していることが示されます。",
+      "prerequisites": ["christoffel-symbols"],
+      "category": "General Relativity Core",
+      "level": 12,
+      "keyFormula": "$\\frac{d^2 x^\\mu}{d\\tau^2} + \\Gamma^\\mu_{\\alpha\\beta} \\frac{dx^\\alpha}{d\\tau} \\frac{dx^\\beta}{d\\tau} = 0$",
+      "quiz": {
+        "question": "一般相対論において、重力のみを受けて自由落下する物体の運動軌道はどのように説明されるか？",
+        "options": [
+          "重力という遠隔力に引かれて放物線を描く",
+          "曲がった時空における測地線（最直経路）に沿って進む",
+          "光速を超えて瞬間移動する",
+          "慣性力によって静止し続ける"
+        ],
+        "correctIndex": 1,
+        "explanation": "重力は「力」ではなく時空の曲がりであり、物体はその歪んだ時空の中での直線（測地線）を純粋に運動しています。"
+      }
+    },
+    {
+      "id": "riemann-curvature-tensor",
+      "title": "リーマン曲率テンソル $R^\\rho_{\\sigma\\mu\\nu}$",
+      "summary": "空間の「本質的な曲がり（潮汐力）」を捉える4階テンソル。",
+      "content": "ベクトルを閉曲線に沿って平行移動させたとき、元のベクトルとどれだけズレが生じるかを測る量です。クリストッフェル記号の微分と積から定義され、平坦な空間（ミンコフスキー時空）ではすべての成分が0になります。非ゼロの成分が存在することが、潮汐重力効果（時空の真の歪み）の証拠です。",
+      "prerequisites": ["christoffel-symbols"],
+      "category": "Tensors & Differential Geometry",
+      "level": 12,
+      "keyFormula": "$R^\\rho_{\\sigma\\mu\\nu} = \\partial_\\mu \\Gamma^\\rho_{\\nu\\sigma} - \\partial_\\nu \\Gamma^\\rho_{\\mu\\sigma} + \\dots$",
+      "quiz": {
+        "question": "時空が本質的に曲がっている（重力波や潮汐力が存在する）ことを示す明確な判定基準は何か？",
+        "options": [
+          "座標系が極座標であること",
+          "リーマン曲率テンソルの成分が0でないこと",
+          "光速が一定でないこと",
+          "質量の速度が光速に近いこと"
+        ],
+        "correctIndex": 1,
+        "explanation": "単なる座標系の選択による見かけの加速度ではなく、本質的な空間の歪み（潮汐力）はリーマン曲率テンソル $R^\\rho_{\\sigma\\mu\\nu} \\neq 0$ によってのみ表されます。"
+      }
+    },
+    {
+      "id": "ricci-tensor-scalar",
+      "title": "リッチテンソル $R_{\\mu\\nu}$ とスカラー曲率 $R$",
+      "summary": "リーマン曲率テンソルの縮約によって得られる、体積変化率やエネルギー密度を結びつける量。",
+      "content": "リーマン曲率テンソルの添字を縮約（トレース）することで、2階のリッチテンソル $R_{\\mu\\nu} = R^\\lambda_{\\mu\\lambda\\nu}$、さらに縮約してスカラー曲率 $R = g^{\\mu\\nu} R_{\\mu\\nu}$ を得ます。アインシュタインの場の方程式の左辺を構築する核心的なテンソルです。",
+      "prerequisites": ["riemann-curvature-tensor"],
+      "category": "Tensors & Differential Geometry",
+      "level": 13,
+      "keyFormula": "$R_{\\mu\\nu} = R^\\lambda_{\\mu\\lambda\\nu}, \\quad R = g^{\\mu\\nu} R_{\\mu\\nu}$",
+      "quiz": {
+        "question": "リッチテンソル $R_{\\mu\\nu}$ はリーマン曲率テンソルからどのように導出されるか？",
+        "options": [
+          "添字の縮約（トレースの計算）",
+          "時間微分",
+          "ガリレイ変換",
+          "外積"
+        ],
+        "correctIndex": 0,
+        "explanation": "4階のリーマン曲率テンソルの第1添字と第3添字を縮約することで、2階のリッチテンソルが定義されます。"
+      }
+    },
+    {
+      "id": "stress-energy-tensor",
+      "title": "エネルギー・運動量テンソル $T_{\\mu\\nu}$",
+      "summary": "物質、放射、圧力、エネルギーの分布と流れを4次元的に記述するソース項。",
+      "content": "一般相対論において時空を曲げる「源（ソース）」は質量だけでなく、エネルギー密度 $T_{00}$、運動量流 $T_{0i}$、圧力や剪断応力 $T_{ij}$ のすべてです。完全流体の場合 $T_{\\mu\\nu} = (\\rho + p/c^2) U_\\mu U_\\nu + p g_{\\mu\\nu}$ と表され、エネルギー・運動量保存則 $\\nabla_\\mu T^{\\mu\\nu} = 0$ を満たします。",
+      "prerequisites": ["four-momentum-energy", "metric-tensor"],
+      "category": "General Relativity Core",
+      "level": 11,
+      "keyFormula": "$\\nabla_\\mu T^{\\mu\\nu} = 0$",
+      "quiz": {
+        "question": "一般相対性理論において、時空の歪み（重力）を引き起こす「源」に含まれるものはどれか？",
+        "options": [
+          "質量のみ",
+          "質量、エネルギー密度、圧力、運動量流のすべて",
+          "電荷のみ",
+          "物体の温度のみ"
+        ],
+        "correctIndex": 1,
+        "explanation": "エネルギー・運動量テンソル $T_{\\mu\\nu}$ により、質量だけでなくエネルギー、圧力、ストレス等の全要素が時空を曲げる源となります。"
+      }
+    },
+    {
+      "id": "einstein-field-equations",
+      "title": "アインシュタイン場の方程式（EFE）",
+      "summary": "「物質（エネルギー）が時空の曲がり方を決定し、曲がった時空が物質の動きを指示する」根本方程式。",
+      "content": "1915年に発表された重力の基礎方程式です：$G_{\\mu\\nu} \\equiv R_{\\mu\\nu} - \\frac{1}{2} g_{\\mu\\nu} R + \\Lambda g_{\\mu\\nu} = \\frac{8\\pi G}{c^4} T_{\\mu\\nu}$。左辺はアインシュタインテンソル $G_{\\mu\\nu}$（時空の幾何学構造）、右辺はエネルギー・運動量テンソル（物質分布）を表します。",
+      "prerequisites": ["ricci-tensor-scalar", "stress-energy-tensor"],
+      "category": "General Relativity Core",
+      "level": 14,
+      "keyFormula": "$R_{\\mu\\nu} - \\frac{1}{2} g_{\\mu\\nu} R + \\Lambda g_{\\mu\\nu} = \\frac{8\\pi G}{c^4} T_{\\mu\\nu}$",
+      "quiz": {
+        "question": "アインシュタイン場の方程式の物理的意味を端的に表した表現はどれか？",
+        "options": [
+          "電荷が磁場を生み出し、磁場が力を与える",
+          "エネルギーと時空の幾何学的歪み（曲率）が相互に関連づけられている",
+          "光速は空間の曲がりによって変化する",
+          "質量は速度とともに減少する"
+        ],
+        "correctIndex": 1,
+        "explanation": "方程式の左辺は時空の曲がり（幾何学）、右辺は物質とエネルギーの存在を表しており、両者が等号で結ばれています。"
+      }
+    },
+    {
+      "id": "schwarzschild-metric",
+      "title": "シュヴァルツシルト解",
+      "summary": "静止した球対称な天体（質点）の周囲における真空のアインシュタイン方程式の厳密解。",
+      "content": "アインシュタイン方程式発表の直後にカール・シュヴァルツシルトが導出した初の厳密解です。線素は $ds^2 = -\\left(1 - \\frac{r_s}{r}\\right) c^2 dt^2 + \\left(1 - \\frac{r_s}{r}\\right)^{-1} dr^2 + r^2 d\\Omega^2$。水星の太陽近点移動や光の重力曲げを精密に説明します。",
+      "prerequisites": ["einstein-field-equations", "geodesic-equation"],
+      "category": "General Relativity Core",
+      "level": 15,
+      "keyFormula": "$ds^2 = -\\left(1 - \\frac{r_s}{r}\\right)c^2 dt^2 + \\left(1 - \\frac{r_s}{r}\\right)^{-1} dr^2 + r^2 d\\Omega^2$",
+      "quiz": {
+        "question": "シュヴァルツシルト解が前提としている天体の条件はどれか？",
+        "options": [
+          "高速回転する円盤状の天体",
+          "静止しており球対称な真空外部領域",
+          "無限に広い膨張宇宙",
+          "強い磁場を持つ中性子星"
+        ],
+        "correctIndex": 1,
+        "explanation": "シュヴァルツシルト解は「自転しておらず（球対称）、外部が真空である天体」の周りの時空構造を表します。"
+      }
+    },
+    {
+      "id": "event-horizon",
+      "title": "シュヴァルツシルト半径と事象の地平面",
+      "summary": "光であっても脱出不可能となるブラックホールの境界（事象の地平面）。",
+      "content": "シュヴァルツシルト解において $r = r_s \\equiv \\frac{2GM}{c^2}$ となる半径をシュヴァルツシルト半径と呼びます。この半径が作る面（事象の地平面）の内側では、あらゆる測地線（光を含む）が中心に向かい、外部へ情報が脱出できなくなります。太陽の $r_s$ は約3km、地球は約9mmです。",
+      "prerequisites": ["schwarzschild-metric"],
+      "category": "Astrophysics & Cosmology",
+      "level": 16,
+      "keyFormula": "$r_s = \\frac{2GM}{c^2}$",
+      "quiz": {
+        "question": "質量 $M$ の天体がブラックホールになるための境界半径 $r_s$（シュヴァルツシルト半径）を与える公式はどれか？",
+        "options": [
+          "$r_s = \\frac{GM}{c^2}$",
+          "$r_s = \\frac{2GM}{c^2}$",
+          "$r_s = \\frac{GM^2}{2c}$",
+          "$r_s = \\frac{4\\pi GM}{c^3}$"
+        ],
+        "correctIndex": 1,
+        "explanation": "シュヴァルツシルト半径は $r_s = \\frac{2GM}{c^2}$ で与えられます。"
+      }
+    },
+    {
+      "id": "gravitational-lensing",
+      "title": "重力レンズ効果と光の曲げ",
+      "summary": "大質量天体の重力（時空の歪み）によって、背景の光源からの光が折れ曲がる現象。",
+      "content": "大質量天体（銀河団やブラックホール）の周囲を光が通過する際、歪んだ時空の測地線に沿って光が曲げられます。アインシュタインの予言した偏角 $\\theta = \\frac{4GM}{c^2 b}$ は1919年の日食観測（エディントン）で検証され、現在では暗黒物質（ダークマター）のマッピング等に活用されています。",
+      "prerequisites": ["schwarzschild-metric"],
+      "category": "Astrophysics & Cosmology",
+      "level": 16,
+      "keyFormula": "$\\theta = \\frac{4GM}{c^2 b}$",
+      "quiz": {
+        "question": "重力レンズ効果によって観測される現象として正しいものはどれか？",
+        "options": [
+          "遠方の天体が重力源の周りに複数の像やリング状（アインシュタインリング）に見える",
+          "光の速度が倍増する",
+          "天体の色が青色にシフトする",
+          "光が直線から完全に直角に曲がる"
+        ],
+        "correctIndex": 0,
+        "explanation": "手前にある大質量天体によって背後の光が集光・屈折されるため、複数の像やリング状の像が観測されます。"
+      }
+    },
+    {
+      "id": "gravitational-waves",
+      "title": "重力波（Gravitational Waves）",
+      "summary": "大質量物体の加速度運動によって生じ、光速で時空を伝播する「時空のさざ波」。",
+      "content": "アインシュタイン場の方程式を弱場近似（$g_{\\mu\\nu} = \\eta_{\\mu\\nu} + h_{\\mu\\nu}$）すると、時空のゆらぎ $h_{\\mu\\nu}$ が波動方程式 $\\Box h_{\\mu\\nu} = 0$ に従うことが導かれます。連星ブラックホールの合体などで発生し、2015年にLIGOによって史上初めて直接検出（GW150914）されました。",
+      "prerequisites": ["einstein-field-equations"],
+      "category": "Astrophysics & Cosmology",
+      "level": 15,
+      "keyFormula": "$\\left( -\\frac{1}{c^2}\\frac{\\partial^2}{\\partial t^2} + \\nabla^2 \\right) h_{\\mu\\nu} = 0$",
+      "quiz": {
+        "question": "重力波の伝播速度について正しいものはどれか？",
+        "options": [
+          "音速と同じ",
+          "真空中の光速 $c$ と等しい",
+          "無限大（即時伝達）",
+          "発生源の質量による"
+        ],
+        "correctIndex": 1,
+        "explanation": "一般相対論の線形化方程式から、時空の歪みの波である重力波は光速 $c$ で伝播します。"
+      }
+    },
+    {
+      "id": "flrw-metric-cosmology",
+      "title": "FLRW計量と現代宇宙論",
+      "summary": "宇宙原理（一様・等方）に基づく動的宇宙の時空構造とフリードマン方程式。",
+      "content": "宇宙全体が一様かつ等方であるという「宇宙原理」に基づくと、時空線素はFLRW計量 $ds^2 = -c^2 dt^2 + a(t)^2 \\left[ \\frac{dr^2}{1-kr^2} + r^2 d\\Omega^2 \\right]$ で与えられます。スケール因子 $a(t)$ の時間変化を記述するフリードマン方程式により、宇宙のビッグバン膨張や加速膨張モデルが導かれます。",
+      "prerequisites": ["einstein-field-equations"],
+      "category": "Astrophysics & Cosmology",
+      "level": 15,
+      "keyFormula": "$\\left(\\frac{\\dot{a}}{a}\\right)^2 = \\frac{8\\pi G}{3}\\rho - \\frac{kc^2}{a^2} + \\frac{\\Lambda c^2}{3}$",
+      "quiz": {
+        "question": "現代宇宙論の基礎となる「宇宙原理」が仮定している2つの性質はどれか？",
+        "options": [
+          "一様性と等方性",
+          "定常性と無限性",
+          "回転性と扁平性",
+          "局所性と不可逆性"
+        ],
+        "correctIndex": 0,
+        "explanation": "大スケールにおいて宇宙には特別な場所が存在しない（一様性）およびどの方向を見ても同じ（等方性）という仮定です。"
+      }
+    },
+    {
+      "id": "black-hole-thermodynamics",
+      "title": "ブラックホール熱力学とホーキング放射",
+      "summary": "一般相対論と量子力学が交差する、ブラックホールのエントロピーと熱放射。",
+      "content": "ブラックホールの事象の地平面の面積 $A$ は減少せずエントロピー $S = \\frac{k_B c^3 A}{4 G \\hbar}$ に比例するというベッケンシュタイン・ホーキングの公式。量子場効果によりブラックホールは温度 $T = \\frac{\\hbar c^3}{8\\pi G M k_B}$ で熱放射（ホーキング放射）を行い、極小のものは蒸発することが示されています。",
+      "prerequisites": ["event-horizon"],
+      "category": "Astrophysics & Cosmology",
+      "level": 17,
+      "keyFormula": "$S_{\\text{BH}} = \\frac{k_B c^3 A}{4 G \\hbar}$",
+      "quiz": {
+        "question": "ホーキング放射によってブラックホールの質量はどう変化するか？",
+        "options": [
+          "周囲から物質を吸い込んで無限に大きくなる",
+          "エネルギーを放出して徐々に質量が減少（蒸発）する",
+          "質量は永久に一定である",
+          "急激に質量が増加する"
+        ],
+        "correctIndex": 1,
+        "explanation": "ホーキング放射に伴い熱エネルギーを持ち出すため、外部からの補給がない場合ブラックホールの質量は縮小（蒸発）します。"
+      }
+    }
+  ]
+}
